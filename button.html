@@ -1,3 +1,14 @@
+
+
+
+
+
+
+<!-- Quarkd 仅用于移动端项目，请将窗口调整到 H5 模式 -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,25 +16,24 @@
     <title>Button - quarkd + Vanilla JS</title>
   </head>
   <body>
-    <!-- Quarkd 仅用于移动端项目，请将窗口调整到 H5 模式 -->
 
     <quark-button>默认按钮</quark-button>
     <quark-button type="primary">主要按钮</quark-button>
     <quark-button type="success">成功按钮</quark-button>
     <quark-button type="danger">危险按钮</quark-button>
     <quark-button type="warning">警告按钮</quark-button>
+
   </body>
-  <!-- also, you can use cdn as: <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script> -->
+
   <script type="module">
     import 'quarkd/lib/button'
   </script>
-  <script type="module">
 
+  <script type="module">
     const el = document.querySelector('quark-button')
 
     setTimeout(() => {
-      el.disabled = true
-      // also, you can write like this ->: el.removeAttribute('disabled')
+      el.disabled = true // 等价于：el.removeAttribute('disabled')
     }, 1000)
 
   </script>

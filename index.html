@@ -2,28 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Button - quarkd + Vanilla JS</title>
+    <title>Quarkd + Vanilla JS</title>
   </head>
   <body>
-    <!-- Quarkd 仅用于移动端项目，请将窗口调整到 H5 模式 -->
 
     <quark-button>默认按钮</quark-button>
-    <quark-button type="primary">主要按钮</quark-button>
-    <quark-button type="success">成功按钮</quark-button>
-    <quark-button type="danger">危险按钮</quark-button>
-    <quark-button type="warning">警告按钮</quark-button>
+
   </body>
-  <!-- also, you can use cdn as: <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"></script> -->
+  <script>
+    /**
+     * 使用方式一：npm 包
+     * npm i quarkd
+      <script type="module">
+        import 'quarkd/lib/button'
+      <\/script>
+
+
+    /**
+     * 使用方式二：CDN
+     *
+     * 当然，你也可以通过CDN直接使用Quarkd (Also, you can use cdn as)
+      <script src="https://fastly.jsdelivr.net/npm/quarkd@latest/umd/index.js"><\/script>
+
+
+
+    /**
+     * 组件属性修改方法：
+     *
+     * 所有组件关于属性的获取和设置均类似写法：
+
+     方式1：
+     * comp.props // 获取
+     * comp.props = newProps
+
+     方式2：
+     * // 原生属性操作
+     * comp.setAttribute('props',newProps)
+     * comp.removeAttribute('props')
+     *
+     *
+  </script>
   <script type="module">
     import 'quarkd/lib/button'
   </script>
   <script type="module">
-
     const el = document.querySelector('quark-button')
 
     setTimeout(() => {
-      el.disabled = true
-      // also, you can write like this ->: el.removeAttribute('disabled')
+      el.disabled = true // 等价于：el.removeAttribute('disabled')
     }, 1000)
 
   </script>
