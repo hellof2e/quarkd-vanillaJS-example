@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "npm run start",
     "start": "vite --open",
-    "build": "rimraf lib && vite build --config vite.config.build.ts"
+    "build": "vite build"
   },
   "type": "module",
   "keywords": [
