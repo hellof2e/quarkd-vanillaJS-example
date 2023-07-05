@@ -1,3 +1,10 @@
+
+
+<!-- Quarkd 属于移动端UI组件库，请将窗口调整到 H5 模式 -->
+<!-- Quarkd 属于移动端UI组件库，请将窗口调整到 H5 模式 -->
+<!-- Quarkd 属于移动端UI组件库，请将窗口调整到 H5 模式 -->
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,10 +12,25 @@
     <title>Quarkd + Vanilla JS</title>
   </head>
   <body>
+    <h1>欢迎使用 Quarkd ！</h1>
 
-    <quark-button>默认按钮</quark-button>
+    <quark-button type="primary">按钮示例（2 秒后变为 disabled）</quark-button>
 
   </body>
+
+  <script type="module">
+    import 'quarkd/lib/button'
+  </script>
+  <script type="module">
+    const el = document.querySelector('quark-button')
+
+    setTimeout(() => {
+      el.disabled = true // 等价于：el.removeAttribute('disabled')
+    }, 2000)
+
+  </script>
+
+
   <script>
     /**
      * 使用方式一：npm 包
@@ -31,26 +53,15 @@
      *
      * 所有组件关于属性的获取和设置均类似写法：
 
-     方式1：
-     * comp.props // 获取
-     * comp.props = newProps
+    方式1：
+    * comp.props // 获取
+    * comp.props = newProps
 
-     方式2：
-     * // 原生属性操作
-     * comp.setAttribute('props',newProps)
-     * comp.removeAttribute('props')
-     *
-     *
-  </script>
-  <script type="module">
-    import 'quarkd/lib/button'
-  </script>
-  <script type="module">
-    const el = document.querySelector('quark-button')
-
-    setTimeout(() => {
-      el.disabled = true // 等价于：el.removeAttribute('disabled')
-    }, 1000)
-
+    方式2：
+    * // 原生属性操作
+    * comp.setAttribute('props',newProps)
+    * comp.removeAttribute('props')
+    *
+    *
   </script>
 </html>
