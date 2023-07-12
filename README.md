@@ -13,4 +13,4 @@ npm run dev
 
 ## 完整文档
 
-请点击：https://vanilla-quarkdesign.hellobike.com/#/zh-CN/component/button
+请点击：https://vanilla-quarkd.hellobike.com/#/zh-CN/component/button
